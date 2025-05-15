@@ -1,0 +1,93 @@
+:root {
+    --background: #311B92;
+    --primary: #673AB7;
+    --text: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    display: grid;
+    background: linear-gradient(45deg, var(--background), hsl(from var(--background) calc(h + 25) s calc(l - 0)));
+    place-items: center;
+  }
+  
+  main {
+    display: grid;
+    padding: 1.2rem;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    font-family: Inconsolata;
+    max-width: 1400px;
+  }
+  
+  .card {
+    background: #fff; /* Fallback; replace dynamically via JS if needed */
+    border-radius: 0.4rem;
+    box-shadow: 0 5px 10px -7px rgba(0, 0, 0, 0.3);
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .card__video {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card__text {
+    text-align: center;
+    padding: 0.4rem;
+    color: #253342; /* Consider calculating contrast dynamically with JS */
+  }
+  
+  /* Fixed nav gradient & box-shadow */
+  nav {
+    background: linear-gradient(135deg, #9575CD, #673AB7, #512DA8);
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  
+  .nav-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 45px;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 21px;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+  
